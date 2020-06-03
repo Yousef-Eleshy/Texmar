@@ -27,7 +27,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'data/payment_method.xml',
+        'data/cust_payment_method.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
