@@ -6,7 +6,7 @@
             <field name="priority" eval="40"/>
             <field name="inherit_id" ref="account.view_account_journal_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//form/sheet/notebook/page[@name='advanced_settings']/group/group/field[@name='inbound_payment_method_ids']" position="after">
+                <xpath expr="//page[@name='advanced_settings']/group/group/field[@name='inbound_payment_method_ids']" position="after">
                     <field name="bank_account_number"/>
                     
                 </xpath>
