@@ -7,8 +7,13 @@
             <field name="inherit_id" ref="account.view_account_journal_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//page[@name='advanced_settings']/group/group/field[@name='inbound_payment_method_ids']" position="after">
-                    <field name="bank_account_number"/>
-                    
+                    <field name="in_bank_account_number"/>
+                    <field name="in_visa_account_number"/>
+                </xpath>
+                
+                <xpath expr="//page[@name='advanced_settings']/group/group/field[@name='outbound_payment_method_ids']" position="after">
+                    <field name="out_bank_account_number"/>
+                    <field name="out_visa_account_number"/>
                 </xpath>
           </field>
       </record>
