@@ -7,13 +7,17 @@
             <field name="inherit_id" ref="account.view_account_journal_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//page[@name='advanced_settings']/group/group/field[@name='inbound_payment_method_ids']" position="after">
-                    <field name="in_bank_account_number"/>
-                    <field name="in_visa_account_number"/>
+                    <field name="in_bank_payment_method_selected" invisible="1"/>
+                    <field name="in_bank_account_number" attrs="{'invisible': ['|', ('type', '!=', 'bank'), ('in_bank_payment_method_selected', '=', False)]}"/>
+                    <field name="in_visa_payment_method_selected" invisible="1"/>
+                    <field name="in_visa_account_number" attrs="{'invisible': ['|', ('type', '!=', 'bank'), ('in_visa_payment_method_selected', '=', False)]}"/>
                 </xpath>
                 
                 <xpath expr="//page[@name='advanced_settings']/group/group/field[@name='outbound_payment_method_ids']" position="after">
-                    <field name="out_bank_account_number"/>
-                    <field name="out_visa_account_number"/>
+                    <field name="out_bank_payment_method_selected" invisible="1"/>
+                    <field name="out_bank_account_number" attrs="{'invisible': ['|', ('type', '!=', 'bank'), ('out_bank_payment_method_selected', '=', False)]}"/>
+                    <field name="out_visa_payment_method_selected" invisible="1"/>
+                    <field name="out_visa_account_number" attrs="{'invisible': ['|', ('type', '!=', 'bank'), ('out_visa_payment_method_selected', '=', False)]}"/>
                 </xpath>
           </field>
       </record>
